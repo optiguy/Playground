@@ -1,0 +1,23 @@
+$white : #f1f1f1;
+$black : #9d9d9d;
+
+@mixin border-radius($w){
+	-webkit-border-radius: $w;
+	-o-border-radius: $w;
+	-ie-border-radius: $w;
+	-moz-border-radius: $w;
+	border-radius: $w;
+}
+
+body{
+	background-color: $white;
+	color: $black;
+	.header{
+		background-color: darken($white,10%);
+		@include border-radius(3px);
+	}
+	.footer{
+		background-color: lighten($black,10%);
+		@include border-radius(5px);
+	}
+}
